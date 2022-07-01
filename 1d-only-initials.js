@@ -16,3 +16,7 @@ function onlyInitials(nameArr) {
     return initialArr;
 }
 
+console.log(`onlyInitials(["Amadeus Bach", "Ludwig Mendelssohn"]) returns: `, onlyInitials(["Amadeus Bach", "Ludwig Mendelssohn"]), `should return: ["A.B.", "L.M."]`);
+console.log(`onlyInitials([]) returns: `, onlyInitials([]), `should return: []`);
+console.log(`onlyInitials(["Zeno Zeno"]) returns: `, onlyInitials(["Zeno Zeno"]), `should return: [Z.Z.]`);
+console.log(`onlyInitials(["Batman"]) returns: `, onlyInitials(["Batman"]), `should return: ["B."]`);
