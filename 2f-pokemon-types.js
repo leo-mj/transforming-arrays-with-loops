@@ -14,12 +14,7 @@ Example:
  */
 
 function pokemonTypes(pokemonList) {
-    let descriptionList = [];
-    for (let pokemon of pokemonList) {
-        let description = describePokemon(pokemon);
-        descriptionList.push(description);
-    }
-    return descriptionList;
+    return pokemonList.map(describePokemon);
 }
 
 function describePokemon(pokemon) {
