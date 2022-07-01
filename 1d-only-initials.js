@@ -21,6 +21,11 @@ function onlyInitials(nameArr) {
     return initialArr;
 }
 
+/**
+ * Returns the initials of a given name.
+ * @param {string} name - a first and last name
+ * @returns {string} - initials of name
+ */
 function findInitials(name) {
     let initials = "";
     let splitName = name.split(" ");
