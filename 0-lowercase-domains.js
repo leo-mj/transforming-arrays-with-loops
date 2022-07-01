@@ -1,3 +1,7 @@
+// function name: lowerCaseArray
+// parameters:
+//   - inputArray: array of strings
+// returns: array of strings
 /**
  * Takes an array of strings representing domain names, in mixed case, and returns an array of the domain names in all-lowercase.
  * @param {string[]} inputArray - array of strings in mixed case
