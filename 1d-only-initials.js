@@ -13,7 +13,22 @@ Example: ["Ash Ketchum", "Lucy Heartfilia", "Yugi Moto"] -> ["A.K.", "L.H.", "Y.
  */
 
 function onlyInitials(nameArr) {
+    let initialArr = [];
+    for (let name of nameArr) {
+        let initials = findInitials(name);
+        initialArr.push(initials);
+    }
     return initialArr;
+}
+
+function findInitials(name) {
+    let initials = "";
+    let splitName = name.split(" ");
+    for (let half of splitName) {
+        let firstLetter = half[0];
+        initials += `${firstLetter}.`;
+    }
+    return initials;
 }
 
 console.log(`onlyInitials(["Amadeus Bach", "Ludwig Mendelssohn"]) returns: `, onlyInitials(["Amadeus Bach", "Ludwig Mendelssohn"]), `should return: ["A.B.", "L.M."]`);
