@@ -15,14 +15,13 @@ returns: array of numbers
  */
 
 function countStrings(stringArr) {
-    let lengthArr = [];
-    for (let string of stringArr) {
-        let stringLength = string.length
-        lengthArr.push(stringLength);
-    }
+    let lengthArr = stringArr.map(findLength);
     return lengthArr;
 }
 
+function findLength(string) {
+    return string.length;
+}
 // test cases:
 console.log(`countStrings([]) returns: `, countStrings([]), `should return: [0]`);
 console.log(`countStrings(["I", "am", "Leo"]) returns: `, countStrings(["I", "am", "Leo"]), `should return: [1, 2, 3]`);
