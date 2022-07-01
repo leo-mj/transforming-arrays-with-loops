@@ -23,7 +23,9 @@ function pokemonTypes(pokemonList) {
 }
 
 function describePokemon(pokemon) {
-    let description = `${pokemon.name} is a ${pokemon.type} type Pokémon`;
+    let name = `${pokemon.name}`
+    let type = `${pokemon.type}`.toLowerCase();
+    let description = `${name} is a ${type} type Pokémon`;
     return description;
 }
 
