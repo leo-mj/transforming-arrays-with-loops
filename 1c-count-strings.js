@@ -15,6 +15,11 @@ returns: array of numbers
  */
 
 function countStrings(stringArr) {
+    let lengthArr = [];
+    for (let string of stringArr) {
+        let stringLength = string.length
+        lengthArr.push(stringLength);
+    }
     return lengthArr;
 }
 
