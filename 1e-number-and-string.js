@@ -9,7 +9,19 @@ Example: [4, -3.2] -> [{ asNumber: 4, asString: '4' }, { asNumber: -3.2, asStrin
 // parameters: inputNums, array of numbers
 // returns: array of plain objects
 
+/**
+ * Takes an array of numbers and returns an array of plain objects.
+ * @param {number[]} inputNums - array of numbers
+ * @returns {object[]} - array of objects that have as properties: asNumber - each number from inputNums,
+asString - a string representation of the number
+ */
+
 function numAndStr(inputNums) {
+    let numStrArray = [];
+    for (let num of inputNums) {
+        let numObject = { asNumber: num, asString: `${num}`};
+        numStrArray.push(numObject);
+    }
     return numStrArray;
 }
 
