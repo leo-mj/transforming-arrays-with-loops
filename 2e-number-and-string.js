@@ -17,12 +17,13 @@ asString - a string representation of the number
  */
 
 function numAndStr(inputNums) {
-    let numStrArray = [];
-    for (let num of inputNums) {
-        let numObject = { asNumber: num, asString: `${num}`};
-        numStrArray.push(numObject);
-    }
+    let numStrArray = inputNums.map(createObj);
     return numStrArray;
+}
+
+function createObj(num) {
+    let numObject = { asNumber: num, asString: `${num}`};
+    return numObject;
 }
 
 console.log(`numAndStr([]) returns: `, numAndStr([]), `should return: []`);
