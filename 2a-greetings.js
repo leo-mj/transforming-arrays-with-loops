@@ -11,15 +11,13 @@
  * @returns {string[]} - greetings to each name in nameArray
  */
 function greetings(nameArray) {
-    let greetingsArray = [];
-    if (nameArray.length === 0) {
-        return nameArray;
-    }
-    for (let name of nameArray) {
-        let greeting = `Hello, ${name}!`;
-        greetingsArray.push(greeting);
-    }
+    let greetingsArray = nameArray.map(greetName);
     return greetingsArray;
+}
+
+function greetName(name) {
+    let greeting = `Hello, ${name}!`;
+    return greeting;
 }
 
 console.log(`greetings(['Gabe', 'Hetty', 'Ines', 'Jake']) returns: `, greetings(['Gabe', 'Hetty', 'Ines', 'Jake']), `should return: ['Hello, Gabe!', 'Hello, Hetty!', 'Hello, Ines!', 'Hello, Jake!']`);
