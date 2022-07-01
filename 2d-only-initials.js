@@ -13,13 +13,11 @@ Example: ["Ash Ketchum", "Lucy Heartfilia", "Yugi Moto"] -> ["A.K.", "L.H.", "Y.
  */
 
 function onlyInitials(nameArr) {
-    let initialArr = [];
-    for (let name of nameArr) {
-        let initials = findInitials(name);
-        initialArr.push(initials);
-    }
+    let initialArr = nameArr.map(findInitials);
     return initialArr;
 }
+
+
 
 /**
  * Returns the initials of a given name.
