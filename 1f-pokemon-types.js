@@ -22,5 +22,11 @@ function pokemonTypes(pokemonList) {
     return descriptionList;
 }
 
+function describePokemon(pokemon) {
+    let description = `${pokemon.name} is a ${pokemon.type} type Pokémon`;
+    return description;
+}
+
+
 console.log(`pokemonTypes([{ name: 'Bulbasaur', type: 'Grass' }, { name: 'Charmander', type: 'Fire' }, { name: 'Squirtle', type: 'Water' }]) returns: `, pokemonTypes([{ name: 'Bulbasaur', type: 'Grass' }, { name: 'Charmander', type: 'Fire' }, { name: 'Squirtle', type: 'Water' }]), `should return: ["Bulbasaur is a grass type Pokémon.", "Charmander is a fire type Pokémon.", "Squirtle is a water type Pokémon."]`);
 console.log(`pokemonTypes([]) returns: `, pokemonTypes([]), `should return: []`);
