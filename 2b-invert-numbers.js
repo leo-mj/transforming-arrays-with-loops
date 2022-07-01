@@ -8,12 +8,12 @@
  * @returns {number[]} - array of numbers from numArray with signs flipped
  */
 function invertNumbers(numArray) {
-    let invertedArray = [];
-    for (let number of numArray) {
-        let invertedNumber = number * (-1);
-        invertedArray.push(invertedNumber);
-    }
+    let invertedArray = numArray.map(invertNum);
     return invertedArray;
+}
+
+function invertNum(number) {
+    return number* (-1);
 }
 
 console.log('linvertNumbers([-1, 0, 1]) returns:', invertNumbers([-1, 0, 1]), '; should return: [1, 0, -1]');
