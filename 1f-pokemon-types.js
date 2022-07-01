@@ -10,10 +10,15 @@ Example:
  * Takes an array of objects representing Pokémon, with string properties name and type, 
  * and returns a descriptive sentence about them and their type: "<name> is a <type in lowercase> type Pokémon.".
  * @param {object[]} pokemonList - array of objects representing Pokémon with string properties name and type
- * @returns {strin[]} - array of strings describing the Pokémon from pokemonList
+ * @returns {string[]} - array of strings describing the Pokémon from pokemonList
  */
 
 function pokemonTypes(pokemonList) {
+    let descriptionList = [];
+    for (let pokemon of pokemonList) {
+        let description = describePokemon(pokemon);
+        descriptionList.push(description);
+    }
     return descriptionList;
 }
 
